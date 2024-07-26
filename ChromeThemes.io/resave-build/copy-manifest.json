@@ -27,7 +27,10 @@
     "side_panel":{
         "default_path":"sidepanel.html"
     },
-    "permissions":["sidePanel"],
+    "permissions":[
+        "sidePanel",
+        "scripting"
+    ],
     "content_scripts":[
         {
             "matches":["https://www.plasmo.com/*"],

@@ -1,4 +1,7 @@
 // algorithm used for editing the DOM
-export const changeThemes = (colors: string[]) => {
-    // case eval depending on how many colors are in the array
-}
+export const applyTheme = (colors: string[]) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id!, { action: "applyTheme", colors });
+    });
+  };
+  

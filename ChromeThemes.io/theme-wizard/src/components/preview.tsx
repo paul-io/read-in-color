@@ -1,4 +1,4 @@
-import { changeThemes } from "src/changeTheme"; // function to change the dom
+import { applyTheme } from "src/changeTheme"; // function to change the dom
 import React from 'react';
 
 const Preview = ({ theme, isSelected, onSelect }) => {
@@ -7,7 +7,7 @@ const Preview = ({ theme, isSelected, onSelect }) => {
   return (
     <li 
       onClick={onSelect}
-      className={`plasmo-w-full plasmo-border-b plasmo-border-gray-200 dark:plasmo-border-gray-600 ${
+      className={`plasmo-w-full plasmo-border-b plasmo-border-gray-200 hover:plasmo-bg-gray-600 dark:plasmo-border-gray-600 ${
         isSelected ? ' plasmo-bg-blue-200 dark:plasmo-bg-gray-500' : ''
       }`}
     >
@@ -27,23 +27,16 @@ const Preview = ({ theme, isSelected, onSelect }) => {
                 width: '20px', 
                 height: '20px', 
                 display: 'inline-block', 
-                margin: '4px' 
+                margin: '2px' 
               }} 
               className="plasmo-flex-shrink-0 plasmo-border-2 plasmo-border-gray-500 plasmo-rounded-sm"
             ></span>
           ))}
         </div>
-        <input 
-          id={`radio-${id}`} 
-          type="radio" 
-          name="list-radio" 
-          className="plasmo-ml-auto plasmo-w-4 plasmo-h-4 plasmo-text-blue-600 plasmo-bg-gray-100 plasmo-border-gray-300 focus:plasmo-ring-blue-500 dark:focus:plasmo-ring-blue-600 dark:plasmo-ring-offset-gray-700 dark:focus:plasmo-ring-offset-gray-700 focus:plasmo-ring-4 dark:plasmo-bg-gray-600 dark:plasmo-border-gray-500"
-          checked={isSelected}
-          readOnly
-        />
+
       </div>
     </li>
-  );
+  ); 
 };
 
 export default Preview;
