@@ -1,0 +1,65 @@
+{
+  "name": "read-in-color",
+  "displayName": "Read in Color",
+  "version": "1.0.0",
+  "description": "Change text and background colors for a comfortable reading experience on content-focused websites.",
+  "author": "Paul Ioffreda",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "@plasmohq/messaging": "^0.6.2",
+    "@types/firefox-webext-browser": "^120.0.4",
+    "lucide-react": "^0.525.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.5.2",
+    "tailwindcss": "3.4.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "buffer": "^6.0.3",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "plasmo": "0.90.5",
+    "postcss": "8.4.33",
+    "prettier": "3.2.4",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "typescript": "5.3.3",
+    "url": "^0.11.3",
+    "util": "^0.12.5"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ],
+    "permissions": [
+      "sidePanel",
+      "tabs",
+      "storage",
+      "identity",
+      "identity.email"
+    ],
+    "oauth2": {
+      "client_id": "285545138963-lsa36avgvjurgbfign07uh228ueuhobo.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/userinfo.profile",
+        "https://www.googleapis.com/auth/userinfo.email"
+      ]
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtw0fuImfFQmtnWYNL2ZbETN4s+05Z1ttXVZzSrtsxtnstyoIIP7t8JOEaQJS37clTwZC7orMGbI2g5BWp+cdSaHSdKL7K4bv6CD6nWBif4twB4OG8+2y2yVnfYiFxUKjpSglxu8B3Q9/RRJnPPbSinRJ/RJL5e2S87ip5rg6YgmKkrgaPL3M8Sj2ayoUbf5ReczIwsGR4HFlOp0HSXr9mCWXd8m/43aeemO233nKVGOavYM1c+GO/LHzFphcUtRQ9I7IRhiUmHteM9T5k6ZccD9kvqs3llwlasQhvZJKnh7k0QicuUvb9elyI9MbP94SgjnRPA3cGDrgIsQyqPBn7QIDAQAB",
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    }
+  }
+}

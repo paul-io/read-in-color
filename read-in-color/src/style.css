@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body {
+      @apply plasmo-bg-gray-300 plasmo-m-0 plasmo-p-0 plasmo-h-full plasmo-w-full;
+      @apply plasmo-h-screen plasmo-w-screen plasmo-m-0 plasmo-p-0;
+      @apply plasmo-flex plasmo-items-center plasmo-justify-center;
+      overflow: hidden;
+    }
+
+    html.dark, body.dark {
+      @apply plasmo-bg-gray-900;
+    }
+  
+    #root {
+      @apply plasmo-h-full plasmo-w-full;
+    }
+  }
+  
